@@ -36,6 +36,7 @@ http.createServer(function(request,response){
 		var msg = unescape(url_parts.pathname.substring(5));
 		messages.push(msg);
 		while(clients.length > 0){
+		
 			var client = clients.pop();
 			client.end(JSON.stringify({			
 				count:messages.length,
