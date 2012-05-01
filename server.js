@@ -46,7 +46,7 @@ http.createServer(function(request,response){
 	}
 	else {
 		//do nothing
-		console.log("do nothing" );
+		console.log("do nothing for now" );
 		
 	}
 	
