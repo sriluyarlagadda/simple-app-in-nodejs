@@ -11,3 +11,7 @@ function process(argv){
 }
 
 process(['1','what','help']);
+
+
+var keys = Object.keys({a:'foo',b:'bar'});
+console.log(keys,keys.length);
