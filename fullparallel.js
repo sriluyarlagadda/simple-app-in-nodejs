@@ -10,25 +10,14 @@ function final(){
 var items = [1,2,3,4,5,6];
 var results = [];
 
-var running = 0;
-var limit = 4;
 
-function launcher(){
-  while(running < limit && items.length > 0){
-	var item = items.shift();
+items.forEach(function(item){
 	async(item,function(result){
 		results.push(result);
-		running--;
-		if(items.length > 0){
-			launcher();
-		}
-		else if(running == 0){
+		if(results.length == items.length){
 			final();
 		}
-	});
-	running++;
-  }
-}
+	})
+	
+});
 
-
-launcher();
