@@ -3,6 +3,7 @@ function async(arg,callback) {
 	setTimeout(function(){callback(arg*2);},1000);
 }
 
+//value 
 function final(){
 	console.log("data",results);
 }
